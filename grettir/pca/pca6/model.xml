@@ -1,0 +1,983 @@
+<object-stream>
+  <PCAModel id="1" serialization="custom">
+    <com.rapidminer.operator.AbstractIOObject>
+      <default>
+        <source>PCA</source>
+      </default>
+    </com.rapidminer.operator.AbstractIOObject>
+    <com.rapidminer.operator.ResultObjectAdapter>
+      <default>
+        <annotations id="2">
+          <keyValueMap id="3"/>
+        </annotations>
+      </default>
+    </com.rapidminer.operator.ResultObjectAdapter>
+    <com.rapidminer.operator.AbstractModel>
+      <default>
+        <headerExampleSet id="4" serialization="custom">
+          <com.rapidminer.operator.ResultObjectAdapter>
+            <default>
+              <annotations id="5">
+                <keyValueMap id="6">
+                  <entry>
+                    <string>Source</string>
+                    <string>/Users/milos/git/kiri/browser/pca/instances.csv</string>
+                  </entry>
+                </keyValueMap>
+              </annotations>
+            </default>
+          </com.rapidminer.operator.ResultObjectAdapter>
+          <com.rapidminer.example.set.AbstractExampleSet>
+            <default>
+              <idMap id="7"/>
+              <statisticsMap id="8"/>
+            </default>
+          </com.rapidminer.example.set.AbstractExampleSet>
+          <com.rapidminer.example.set.HeaderExampleSet>
+            <default>
+              <attributes class="SimpleAttributes" id="9">
+                <attributes class="linked-list" id="10">
+                  <AttributeRole id="11">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="12" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="13">
+                            <keyValueMap id="14"/>
+                          </annotations>
+                          <attributeDescription id="15">
+                            <name>offence impact</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>71</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym</constructionDescription>
+                          <statistics class="linked-list" id="16">
+                            <NumericalStatistics id="17">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="18">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="19">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="20">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="21"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="22">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="23" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="24">
+                            <keyValueMap id="25"/>
+                          </annotations>
+                          <attributeDescription id="26">
+                            <name>offence weight</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>72</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym1</constructionDescription>
+                          <statistics class="linked-list" id="27">
+                            <NumericalStatistics id="28">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="29">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="30">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="31">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="32"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="33">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="34" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="35">
+                            <keyValueMap id="36"/>
+                          </annotations>
+                          <attributeDescription id="37">
+                            <name>acting on anger</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>73</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym2</constructionDescription>
+                          <statistics class="linked-list" id="38">
+                            <NumericalStatistics id="39">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="40">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="41">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="42">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="43"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="44">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="45" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="46">
+                            <keyValueMap id="47"/>
+                          </annotations>
+                          <attributeDescription id="48">
+                            <name>action type</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>74</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym3</constructionDescription>
+                          <statistics class="linked-list" id="49">
+                            <NumericalStatistics id="50">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="51">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="52">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="53">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="54"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="55">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="56" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="57">
+                            <keyValueMap id="58"/>
+                          </annotations>
+                          <attributeDescription id="59">
+                            <name>offence type</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>75</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym4</constructionDescription>
+                          <statistics class="linked-list" id="60">
+                            <NumericalStatistics id="61">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="62">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="63">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="64">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="65"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="66">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="67" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="68">
+                            <keyValueMap id="69"/>
+                          </annotations>
+                          <attributeDescription id="70">
+                            <name>offender status</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>76</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym5</constructionDescription>
+                          <statistics class="linked-list" id="71">
+                            <NumericalStatistics id="72">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="73">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="74">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="75">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="76"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="77">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="78" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="79">
+                            <keyValueMap id="80"/>
+                          </annotations>
+                          <attributeDescription id="81">
+                            <name>reaction effect</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>77</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym6</constructionDescription>
+                          <statistics class="linked-list" id="82">
+                            <NumericalStatistics id="83">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="84">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="85">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="86">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="87"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="88">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="89" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="90">
+                            <keyValueMap id="91"/>
+                          </annotations>
+                          <attributeDescription id="92">
+                            <name>reaction force</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>78</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym7</constructionDescription>
+                          <statistics class="linked-list" id="93">
+                            <NumericalStatistics id="94">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="95">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="96">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="97">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="98"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="99">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="100" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="101">
+                            <keyValueMap id="102"/>
+                          </annotations>
+                          <attributeDescription id="103">
+                            <name>restraint exercised</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>79</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym8</constructionDescription>
+                          <statistics class="linked-list" id="104">
+                            <NumericalStatistics id="105">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="106">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="107">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="108">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="109"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="110">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="111" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="112">
+                            <keyValueMap id="113"/>
+                          </annotations>
+                          <attributeDescription id="114">
+                            <name>restraint rationale</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>80</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym9</constructionDescription>
+                          <statistics class="linked-list" id="115">
+                            <NumericalStatistics id="116">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="117">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="118">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="119">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="120"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="121">
+                    <special>false</special>
+                    <attribute class="NumericalAttribute" id="122" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="123">
+                            <keyValueMap id="124"/>
+                          </annotations>
+                          <attributeDescription id="125">
+                            <name>restraint type</name>
+                            <valueType>4</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>81</index>
+                          </attributeDescription>
+                          <constructionDescription>gensym10</constructionDescription>
+                          <statistics class="linked-list" id="126">
+                            <NumericalStatistics id="127">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <valueCounter>0</valueCounter>
+                            </NumericalStatistics>
+                            <WeightedNumericalStatistics id="128">
+                              <sum>0.0</sum>
+                              <squaredSum>0.0</squaredSum>
+                              <totalWeight>0.0</totalWeight>
+                              <count>0.0</count>
+                            </WeightedNumericalStatistics>
+                            <com.rapidminer.example.MinMaxStatistics id="129">
+                              <minimum>Infinity</minimum>
+                              <maximum>-Infinity</maximum>
+                            </com.rapidminer.example.MinMaxStatistics>
+                            <UnknownStatistics id="130">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="131"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                    </attribute>
+                  </AttributeRole>
+                  <AttributeRole id="132">
+                    <special>true</special>
+                    <specialName>id</specialName>
+                    <attribute class="PolynominalAttribute" id="133" serialization="custom">
+                      <com.rapidminer.example.table.AbstractAttribute>
+                        <default>
+                          <annotations id="134">
+                            <keyValueMap id="135"/>
+                          </annotations>
+                          <attributeDescription id="136">
+                            <name>id</name>
+                            <valueType>5</valueType>
+                            <blockType>1</blockType>
+                            <defaultValue>0.0</defaultValue>
+                            <index>1</index>
+                          </attributeDescription>
+                          <constructionDescription>id</constructionDescription>
+                          <statistics class="linked-list" id="137">
+                            <NominalStatistics id="138">
+                              <mode>-1</mode>
+                              <maxCounter>0</maxCounter>
+                            </NominalStatistics>
+                            <UnknownStatistics id="139">
+                              <unknownCounter>0</unknownCounter>
+                            </UnknownStatistics>
+                          </statistics>
+                          <transformations id="140"/>
+                        </default>
+                      </com.rapidminer.example.table.AbstractAttribute>
+                      <PolynominalAttribute>
+                        <default>
+                          <nominalMapping class="PolynominalMapping" id="141">
+                            <symbolToIndexMap id="142">
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/92185793-1c39-48cb-9893-a2fb0d5eab68/92185793-1c39-48cb-9893-a2fb0d5eab68/</string>
+                                <int>11</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/47ee58d1-d833-41ea-a23c-3363426ae221/47ee58d1-d833-41ea-a23c-3363426ae221/</string>
+                                <int>10</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/18f90dd9-e3a4-466c-858c-f10bc60ff9db/18f90dd9-e3a4-466c-858c-f10bc60ff9db/</string>
+                                <int>27</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/18e4b6c9-8bf7-453a-a97f-1842c4c1d609/18e4b6c9-8bf7-453a-a97f-1842c4c1d609/</string>
+                                <int>19</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/23ac17c1-1739-4cdd-bbba-b325955bbad0/23ac17c1-1739-4cdd-bbba-b325955bbad0/</string>
+                                <int>26</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/0af65d51-67e7-4689-902d-8430655cb024/0af65d51-67e7-4689-902d-8430655cb024/</string>
+                                <int>31</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/4998309f-f0d7-45fd-995b-0c896fee9b59/4998309f-f0d7-45fd-995b-0c896fee9b59/</string>
+                                <int>21</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/13cbd94f-e807-44cd-a02a-f6e3dfb9ef79/13cbd94f-e807-44cd-a02a-f6e3dfb9ef79/</string>
+                                <int>29</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/3c6436bb-4956-4bd2-b1b5-22b0f75a0674/3c6436bb-4956-4bd2-b1b5-22b0f75a0674/</string>
+                                <int>22</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/5834a08a-7e4a-42c5-bed7-57ab4b0d9aed/5834a08a-7e4a-42c5-bed7-57ab4b0d9aed/</string>
+                                <int>16</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/43a09698-ae4a-466b-b5aa-b98efdde73fa/43a09698-ae4a-466b-b5aa-b98efdde73fa/</string>
+                                <int>18</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/c26d7d6d-517b-41c6-aa1b-75efb1727fde/c26d7d6d-517b-41c6-aa1b-75efb1727fde/</string>
+                                <int>7</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/b658c774-18e2-4d89-8035-66969ae23eba/b658c774-18e2-4d89-8035-66969ae23eba/</string>
+                                <int>40</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/aaccb2ba-3635-4139-81fc-bee06c2166f8/aaccb2ba-3635-4139-81fc-bee06c2166f8/</string>
+                                <int>25</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/4ed13a1f-6fa0-420f-8ea3-d6d41725bf61/4ed13a1f-6fa0-420f-8ea3-d6d41725bf61/</string>
+                                <int>0</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/80ef92b8-6383-4dc8-acd6-7ae999a1338f/80ef92b8-6383-4dc8-acd6-7ae999a1338f/</string>
+                                <int>9</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/9ac6a6c3-094b-4f1f-8af9-10601a5e1452/9ac6a6c3-094b-4f1f-8af9-10601a5e1452/</string>
+                                <int>38</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/0a66f199-743c-4f76-a9f9-a903a2bbb3d1/0a66f199-743c-4f76-a9f9-a903a2bbb3d1/</string>
+                                <int>15</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/7cbb0cd6-c8fe-494e-8daf-c86b45d20aa6/7cbb0cd6-c8fe-494e-8daf-c86b45d20aa6/</string>
+                                <int>36</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/ccd790b2-b585-4d0e-8cc1-219015b546ab/ccd790b2-b585-4d0e-8cc1-219015b546ab/</string>
+                                <int>3</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/f3520478-c33b-4e6e-b9cf-dcaa3b95b365/f3520478-c33b-4e6e-b9cf-dcaa3b95b365/</string>
+                                <int>17</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/2d5220b1-959d-4d75-90bd-bfef9048b78d/2d5220b1-959d-4d75-90bd-bfef9048b78d/</string>
+                                <int>1</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/589e02a9-432d-4e5c-99a5-86d2d1701b71/589e02a9-432d-4e5c-99a5-86d2d1701b71/</string>
+                                <int>12</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/3fe8813e-8ac1-4a9c-ba41-255f00ec989e/3fe8813e-8ac1-4a9c-ba41-255f00ec989e/</string>
+                                <int>23</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/71002a5a-ed25-4e4d-b9d3-1986e52046f7/71002a5a-ed25-4e4d-b9d3-1986e52046f7/</string>
+                                <int>6</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/8728baa0-3b47-4dfc-8f4d-046931d54934/8728baa0-3b47-4dfc-8f4d-046931d54934/</string>
+                                <int>24</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/33f4b6b6-85f6-4e4d-9a87-1b565bc8190b/33f4b6b6-85f6-4e4d-9a87-1b565bc8190b/</string>
+                                <int>2</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/f17725d6-a267-4d72-a441-19512c646f0c/f17725d6-a267-4d72-a441-19512c646f0c/</string>
+                                <int>34</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/2df617b1-bea1-4293-8bdf-ec64c55dbad6/2df617b1-bea1-4293-8bdf-ec64c55dbad6/</string>
+                                <int>4</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/902ecf4d-5c1d-44ab-8ec5-9b20fcf72802/902ecf4d-5c1d-44ab-8ec5-9b20fcf72802/</string>
+                                <int>32</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/00964167-c2f2-432f-91c4-7886d360ff51/00964167-c2f2-432f-91c4-7886d360ff51/</string>
+                                <int>37</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/c2cbca04-4148-41a5-88c1-b7ad4c9f7a31/c2cbca04-4148-41a5-88c1-b7ad4c9f7a31/</string>
+                                <int>33</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/08ef5a4c-0f93-40f7-8292-3475ae2cfc47/08ef5a4c-0f93-40f7-8292-3475ae2cfc47/</string>
+                                <int>5</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/9fe3d7a7-a322-4c61-90f0-2c3e963fef6f/9fe3d7a7-a322-4c61-90f0-2c3e963fef6f/</string>
+                                <int>39</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/6d1616de-75c7-405f-911a-cbd6d88f657e/6d1616de-75c7-405f-911a-cbd6d88f657e/</string>
+                                <int>30</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/143ea88a-8913-4ca4-8a04-1d3d8dc62c9f/143ea88a-8913-4ca4-8a04-1d3d8dc62c9f/</string>
+                                <int>13</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/7421fd44-2665-4515-b1d1-068630869658/7421fd44-2665-4515-b1d1-068630869658/</string>
+                                <int>14</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/9a6edc6c-4fd7-4783-bee7-23c1ff67d504/9a6edc6c-4fd7-4783-bee7-23c1ff67d504/</string>
+                                <int>35</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/3b6a8a1c-bfc5-4f49-9245-19f9f4e00d4a/3b6a8a1c-bfc5-4f49-9245-19f9f4e00d4a/</string>
+                                <int>20</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/90a915f8-e772-4659-9980-f3ab66aa6214/90a915f8-e772-4659-9980-f3ab66aa6214/</string>
+                                <int>28</int>
+                              </entry>
+                              <entry>
+                                <string>evernote:///view/2147483647/s94/dc73d868-516c-486c-b4fc-98ab5142be3e/dc73d868-516c-486c-b4fc-98ab5142be3e/</string>
+                                <int>8</int>
+                              </entry>
+                            </symbolToIndexMap>
+                            <indexToSymbolMap id="143">
+                              <string>evernote:///view/2147483647/s94/4ed13a1f-6fa0-420f-8ea3-d6d41725bf61/4ed13a1f-6fa0-420f-8ea3-d6d41725bf61/</string>
+                              <string>evernote:///view/2147483647/s94/2d5220b1-959d-4d75-90bd-bfef9048b78d/2d5220b1-959d-4d75-90bd-bfef9048b78d/</string>
+                              <string>evernote:///view/2147483647/s94/33f4b6b6-85f6-4e4d-9a87-1b565bc8190b/33f4b6b6-85f6-4e4d-9a87-1b565bc8190b/</string>
+                              <string>evernote:///view/2147483647/s94/ccd790b2-b585-4d0e-8cc1-219015b546ab/ccd790b2-b585-4d0e-8cc1-219015b546ab/</string>
+                              <string>evernote:///view/2147483647/s94/2df617b1-bea1-4293-8bdf-ec64c55dbad6/2df617b1-bea1-4293-8bdf-ec64c55dbad6/</string>
+                              <string>evernote:///view/2147483647/s94/08ef5a4c-0f93-40f7-8292-3475ae2cfc47/08ef5a4c-0f93-40f7-8292-3475ae2cfc47/</string>
+                              <string>evernote:///view/2147483647/s94/71002a5a-ed25-4e4d-b9d3-1986e52046f7/71002a5a-ed25-4e4d-b9d3-1986e52046f7/</string>
+                              <string>evernote:///view/2147483647/s94/c26d7d6d-517b-41c6-aa1b-75efb1727fde/c26d7d6d-517b-41c6-aa1b-75efb1727fde/</string>
+                              <string>evernote:///view/2147483647/s94/dc73d868-516c-486c-b4fc-98ab5142be3e/dc73d868-516c-486c-b4fc-98ab5142be3e/</string>
+                              <string>evernote:///view/2147483647/s94/80ef92b8-6383-4dc8-acd6-7ae999a1338f/80ef92b8-6383-4dc8-acd6-7ae999a1338f/</string>
+                              <string>evernote:///view/2147483647/s94/47ee58d1-d833-41ea-a23c-3363426ae221/47ee58d1-d833-41ea-a23c-3363426ae221/</string>
+                              <string>evernote:///view/2147483647/s94/92185793-1c39-48cb-9893-a2fb0d5eab68/92185793-1c39-48cb-9893-a2fb0d5eab68/</string>
+                              <string>evernote:///view/2147483647/s94/589e02a9-432d-4e5c-99a5-86d2d1701b71/589e02a9-432d-4e5c-99a5-86d2d1701b71/</string>
+                              <string>evernote:///view/2147483647/s94/143ea88a-8913-4ca4-8a04-1d3d8dc62c9f/143ea88a-8913-4ca4-8a04-1d3d8dc62c9f/</string>
+                              <string>evernote:///view/2147483647/s94/7421fd44-2665-4515-b1d1-068630869658/7421fd44-2665-4515-b1d1-068630869658/</string>
+                              <string>evernote:///view/2147483647/s94/0a66f199-743c-4f76-a9f9-a903a2bbb3d1/0a66f199-743c-4f76-a9f9-a903a2bbb3d1/</string>
+                              <string>evernote:///view/2147483647/s94/5834a08a-7e4a-42c5-bed7-57ab4b0d9aed/5834a08a-7e4a-42c5-bed7-57ab4b0d9aed/</string>
+                              <string>evernote:///view/2147483647/s94/f3520478-c33b-4e6e-b9cf-dcaa3b95b365/f3520478-c33b-4e6e-b9cf-dcaa3b95b365/</string>
+                              <string>evernote:///view/2147483647/s94/43a09698-ae4a-466b-b5aa-b98efdde73fa/43a09698-ae4a-466b-b5aa-b98efdde73fa/</string>
+                              <string>evernote:///view/2147483647/s94/18e4b6c9-8bf7-453a-a97f-1842c4c1d609/18e4b6c9-8bf7-453a-a97f-1842c4c1d609/</string>
+                              <string>evernote:///view/2147483647/s94/3b6a8a1c-bfc5-4f49-9245-19f9f4e00d4a/3b6a8a1c-bfc5-4f49-9245-19f9f4e00d4a/</string>
+                              <string>evernote:///view/2147483647/s94/4998309f-f0d7-45fd-995b-0c896fee9b59/4998309f-f0d7-45fd-995b-0c896fee9b59/</string>
+                              <string>evernote:///view/2147483647/s94/3c6436bb-4956-4bd2-b1b5-22b0f75a0674/3c6436bb-4956-4bd2-b1b5-22b0f75a0674/</string>
+                              <string>evernote:///view/2147483647/s94/3fe8813e-8ac1-4a9c-ba41-255f00ec989e/3fe8813e-8ac1-4a9c-ba41-255f00ec989e/</string>
+                              <string>evernote:///view/2147483647/s94/8728baa0-3b47-4dfc-8f4d-046931d54934/8728baa0-3b47-4dfc-8f4d-046931d54934/</string>
+                              <string>evernote:///view/2147483647/s94/aaccb2ba-3635-4139-81fc-bee06c2166f8/aaccb2ba-3635-4139-81fc-bee06c2166f8/</string>
+                              <string>evernote:///view/2147483647/s94/23ac17c1-1739-4cdd-bbba-b325955bbad0/23ac17c1-1739-4cdd-bbba-b325955bbad0/</string>
+                              <string>evernote:///view/2147483647/s94/18f90dd9-e3a4-466c-858c-f10bc60ff9db/18f90dd9-e3a4-466c-858c-f10bc60ff9db/</string>
+                              <string>evernote:///view/2147483647/s94/90a915f8-e772-4659-9980-f3ab66aa6214/90a915f8-e772-4659-9980-f3ab66aa6214/</string>
+                              <string>evernote:///view/2147483647/s94/13cbd94f-e807-44cd-a02a-f6e3dfb9ef79/13cbd94f-e807-44cd-a02a-f6e3dfb9ef79/</string>
+                              <string>evernote:///view/2147483647/s94/6d1616de-75c7-405f-911a-cbd6d88f657e/6d1616de-75c7-405f-911a-cbd6d88f657e/</string>
+                              <string>evernote:///view/2147483647/s94/0af65d51-67e7-4689-902d-8430655cb024/0af65d51-67e7-4689-902d-8430655cb024/</string>
+                              <string>evernote:///view/2147483647/s94/902ecf4d-5c1d-44ab-8ec5-9b20fcf72802/902ecf4d-5c1d-44ab-8ec5-9b20fcf72802/</string>
+                              <string>evernote:///view/2147483647/s94/c2cbca04-4148-41a5-88c1-b7ad4c9f7a31/c2cbca04-4148-41a5-88c1-b7ad4c9f7a31/</string>
+                              <string>evernote:///view/2147483647/s94/f17725d6-a267-4d72-a441-19512c646f0c/f17725d6-a267-4d72-a441-19512c646f0c/</string>
+                              <string>evernote:///view/2147483647/s94/9a6edc6c-4fd7-4783-bee7-23c1ff67d504/9a6edc6c-4fd7-4783-bee7-23c1ff67d504/</string>
+                              <string>evernote:///view/2147483647/s94/7cbb0cd6-c8fe-494e-8daf-c86b45d20aa6/7cbb0cd6-c8fe-494e-8daf-c86b45d20aa6/</string>
+                              <string>evernote:///view/2147483647/s94/00964167-c2f2-432f-91c4-7886d360ff51/00964167-c2f2-432f-91c4-7886d360ff51/</string>
+                              <string>evernote:///view/2147483647/s94/9ac6a6c3-094b-4f1f-8af9-10601a5e1452/9ac6a6c3-094b-4f1f-8af9-10601a5e1452/</string>
+                              <string>evernote:///view/2147483647/s94/9fe3d7a7-a322-4c61-90f0-2c3e963fef6f/9fe3d7a7-a322-4c61-90f0-2c3e963fef6f/</string>
+                              <string>evernote:///view/2147483647/s94/b658c774-18e2-4d89-8035-66969ae23eba/b658c774-18e2-4d89-8035-66969ae23eba/</string>
+                            </indexToSymbolMap>
+                          </nominalMapping>
+                        </default>
+                      </PolynominalAttribute>
+                    </attribute>
+                  </AttributeRole>
+                </attributes>
+              </attributes>
+            </default>
+          </com.rapidminer.example.set.HeaderExampleSet>
+        </headerExampleSet>
+      </default>
+    </com.rapidminer.operator.AbstractModel>
+    <PCAModel>
+      <default>
+        <keepAttributes>false</keepAttributes>
+        <manualNumber>false</manualNumber>
+        <numberOfComponents>-1</numberOfComponents>
+        <varianceThreshold>0.95</varianceThreshold>
+        <attributeNames id="144">
+          <string>offence impact</string>
+          <string>offence weight</string>
+          <string>acting on anger</string>
+          <string>action type</string>
+          <string>offence type</string>
+          <string>offender status</string>
+          <string>reaction effect</string>
+          <string>reaction force</string>
+          <string>restraint exercised</string>
+          <string>restraint rationale</string>
+          <string>restraint type</string>
+        </attributeNames>
+        <cumulativeVariance id="145">
+          <double>0.43807139990762684</double>
+          <double>0.6345157516666233</double>
+          <double>0.7329241798205761</double>
+          <double>0.8126354401008367</double>
+          <double>0.8683512602253086</double>
+          <double>0.9056969119383673</double>
+          <double>0.9342704295048049</double>
+          <double>0.9576936137496062</double>
+          <double>0.9757876814195952</double>
+          <double>0.9895693337930334</double>
+          <double>1.0000000000000002</double>
+        </cumulativeVariance>
+        <eigenVectors id="146">
+          <com.rapidminer.operator.features.transformation.Eigenvector id="147">
+            <eigenvalue>0.45833772468527845</eigenvalue>
+            <eigenvector id="148">
+              <double>-0.057299153584265544</double>
+              <double>0.017707707749511664</double>
+              <double>-0.38118491815892536</double>
+              <double>-0.43097577078726057</double>
+              <double>-0.023873728583929544</double>
+              <double>0.14836580672798522</double>
+              <double>-0.40859169643554377</double>
+              <double>-0.3718557101218971</double>
+              <double>0.3009439508729097</double>
+              <double>0.361994910014427</double>
+              <double>0.34051049871487976</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="149">
+            <eigenvalue>0.2055323794967637</eigenvalue>
+            <eigenvector id="150">
+              <double>-0.2563241132536281</double>
+              <double>-0.2369677420051104</double>
+              <double>0.7292417978313438</double>
+              <double>-0.10263632417591738</double>
+              <double>-0.35148870576106245</double>
+              <double>0.06300265336867128</double>
+              <double>-0.22663321353465113</double>
+              <double>-0.13315903421997238</double>
+              <double>0.15725549539630118</double>
+              <double>-0.2072077345625064</double>
+              <double>0.26747803815215804</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="151">
+            <eigenvalue>0.10296105853851276</eigenvalue>
+            <eigenvector id="152">
+              <double>0.4292624531333196</double>
+              <double>0.12098918238717275</double>
+              <double>0.3686989637855258</double>
+              <double>0.2457385848763086</double>
+              <double>0.1147792954773335</double>
+              <double>-0.08931339765330089</double>
+              <double>0.032939836872261846</double>
+              <double>0.21128763784349874</double>
+              <double>0.43723413720959786</double>
+              <double>0.5794875192261157</double>
+              <double>0.10445497581327325</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="153">
+            <eigenvalue>0.08339891094546337</eigenvalue>
+            <eigenvector id="154">
+              <double>-0.10483552765960581</double>
+              <double>-0.25859255185867136</double>
+              <double>-0.3335627119342476</double>
+              <double>0.18019859981912498</double>
+              <double>-0.6272021779722032</double>
+              <double>-0.461674116320921</double>
+              <double>0.2947575625596563</double>
+              <double>0.055134788051850216</double>
+              <double>0.2471954061246724</double>
+              <double>0.07491489275510876</double>
+              <double>0.12344451731359425</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="155">
+            <eigenvalue>0.05829337918478462</eigenvalue>
+            <eigenvector id="156">
+              <double>0.36207363851726543</double>
+              <double>-0.005896992224530772</double>
+              <double>0.11694083053656273</double>
+              <double>-0.5189705295373214</double>
+              <double>0.14332103952197892</double>
+              <double>-0.4705410421371973</double>
+              <double>0.23015142632077712</double>
+              <double>0.03413493394827625</double>
+              <double>-0.3009912371290748</double>
+              <double>-0.09908138862732942</double>
+              <double>0.4351606893316196</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="157">
+            <eigenvalue>0.03907335890145195</eigenvalue>
+            <eigenvector id="158">
+              <double>-0.37668488856724314</double>
+              <double>-0.1458100594906343</double>
+              <double>-0.09564709992126098</double>
+              <double>-0.12093214706580382</double>
+              <double>0.4721586280993786</double>
+              <double>0.027745958398790235</double>
+              <double>0.21652072564012723</double>
+              <double>0.4024643492470407</double>
+              <double>0.5162833514386028</double>
+              <double>-0.25591113383183517</double>
+              <double>0.2201671560987961</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="159">
+            <eigenvalue>0.02989540296494447</eigenvalue>
+            <eigenvector id="160">
+              <double>-0.3637091045318909</double>
+              <double>0.8837646744585088</double>
+              <double>0.08304710748812362</double>
+              <double>-0.012934118003318762</double>
+              <double>-0.14068314819942004</double>
+              <double>-0.14340613070272548</double>
+              <double>0.14352741126011234</double>
+              <double>-0.03590444363241467</double>
+              <double>0.04421182470024617</double>
+              <double>-0.007449642833330125</double>
+              <double>0.12391560838533933</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="161">
+            <eigenvalue>0.024506801799683935</eigenvalue>
+            <eigenvector id="162">
+              <double>-0.06695457641477592</double>
+              <double>0.027075476921112424</double>
+              <double>-0.047611669296067145</double>
+              <double>0.28225634920266235</double>
+              <double>0.2415885177971921</double>
+              <double>-0.6258543510727987</double>
+              <double>-0.6579182118560555</double>
+              <double>0.0169439945235655</double>
+              <double>0.020142523963520082</double>
+              <double>-0.16858431002802451</double>
+              <double>-0.028634621326480918</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="163">
+            <eigenvalue>0.018931146401963066</eigenvalue>
+            <eigenvector id="164">
+              <double>0.11177635935423492</double>
+              <double>0.10869782986991</double>
+              <double>-0.003926655186385761</double>
+              <double>-0.5140877378311646</double>
+              <double>-0.31486406447986015</double>
+              <double>-0.021286198532233805</double>
+              <double>-0.27651994008155995</double>
+              <double>0.5685728098418161</double>
+              <double>0.1253393834047984</double>
+              <double>-0.03240829047329639</double>
+              <double>-0.44192550213267007</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="165">
+            <eigenvalue>0.014419227533632796</eigenvalue>
+            <eigenvector id="166">
+              <double>0.4123520689346134</double>
+              <double>0.18397502454894457</double>
+              <double>-0.20826831492657524</double>
+              <double>0.27186431917474263</double>
+              <double>-0.2188028724595065</double>
+              <double>0.332133269937114</double>
+              <double>-0.20393997852861528</double>
+              <double>0.26331380505224483</double>
+              <double>0.026217019716802188</double>
+              <double>-0.4228073317226162</double>
+              <double>0.4798612402503804</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+          <com.rapidminer.operator.features.transformation.Eigenvector id="167">
+            <eigenvalue>0.010913216012871133</eigenvalue>
+            <eigenvector id="168">
+              <double>0.3787793264713659</double>
+              <double>0.11529865172815357</double>
+              <double>0.017975579709564798</double>
+              <double>-0.09423024703117582</double>
+              <double>0.02614095270193636</double>
+              <double>-0.08772155670871118</double>
+              <double>0.14953585368909159</double>
+              <double>-0.4888573590735465</double>
+              <double>0.5064802704734566</double>
+              <double>-0.44833746214050463</double>
+              <double>-0.32677259296062666</double>
+            </eigenvector>
+          </com.rapidminer.operator.features.transformation.Eigenvector>
+        </eigenVectors>
+        <means id="169">
+          <double>0.8902439024390244</double>
+          <double>0.8170731707317073</double>
+          <double>0.2682926829268293</double>
+          <double>0.5091463414634146</double>
+          <double>0.46341463414634154</double>
+          <double>0.5853658536585366</double>
+          <double>0.19163763066202089</double>
+          <double>0.32113821138211374</double>
+          <double>0.9024390243902439</double>
+          <double>0.6463414634146338</double>
+          <double>0.5714285714285715</double>
+        </means>
+        <variances id="170">
+          <double>0.43807139990762684</double>
+          <double>0.19644435175899644</double>
+          <double>0.09840842815395275</double>
+          <double>0.07971126028026057</double>
+          <double>0.05571582012447193</double>
+          <double>0.03734565171305868</double>
+          <double>0.028573517566437598</double>
+          <double>0.0234231842448013</double>
+          <double>0.01809406766998895</double>
+          <double>0.013781652373438166</double>
+          <double>0.010430666206966801</double>
+        </variances>
+      </default>
+    </PCAModel>
+  </PCAModel>
+</object-stream>

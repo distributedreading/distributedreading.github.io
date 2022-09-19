@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kiri</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="../d3.min.js"></script>
+	<script src="../d3.tja.js"></script>
+	<script src="../bulk.js"></script>
+	<script src="../debug.js"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+	<!-- <h1>Grettir's Temper Management</h1> -->
+
+<!-- 	&nbsp; Wed 15 Jun 11:30 &nbsp;
+
+	<select>
+		<option value="1">pca 1 (working data set)</option>
+		<option value="2">pca 2 (- o. avenged)</option>
+		<option value="3">pca 3 (- o. avenged, revenge t.)</option>
+		<option value="4">pca 4 (- o. avenged, revenge t., self-defence)</option>
+		<option value="5">pca 5 (- o. avenged, revenge t., self-defence, num.p.o.)</option>
+		<option value="6">pca 6 (- o. avenged, revenge t., self-defence, num.p.o., act.conc.)</option>
+		<option value="7">pca 7 (at, rr, oi, ac, os, reff, rf)</option>
+		<option value="8">pca 8 (at, rr, oi, ac, os)</option>
+	</select>
+ -->
+	<script>
+
+		var pca;
+
+		visualizeData(localStorage.dataSet || "1")
+
+		function visualizeData(dataSet) {
+
+			localStorage.dataSet = dataSet
+
+			pca = {};
+
+			// d3.select("select")
+			// 	.on("change", function(){
+			// 		localStorage.dataSet = this.selectedIndex + 1
+			// 		location.reload()
+			// 	})
+			// 	.node()
+			// 	.selectedIndex = parseInt(dataSet) - 1
+
+			d3.dsv(";", "text/plain")("pca" + dataSet + "/components.csv")
+	    		.row(function(d, instanceIndex) { 
+	    			for(var i = 1; ; ++i) {
+	    				var key = "pc_"+i
+	    				var pc = d[key]
+	    				if (!pc) break
+	    				d[key] = parseFloat(pc)
+	    			}
+	    			d.number = instanceIndex + 1
+	    			return d; 
+	    		})
+	    		.get(function(error, rows){ 
+					if(error) console.warn(error)
+					pca.examples = rows;
+
+			    	d3.xml("pca" + dataSet + "/model.xml", function(error, xml) {
+			  			if (error) console.warn(error)
+
+			  			var model = d3.select(xml)
+			  				.select("PCAModel PCAModel default")
+
+			  			var attributes = model.selectAll("attributeNames string").eachText()
+			  			var variances = model.selectAll("variances double").eachText(parseFloat)
+
+			  			var maxVariance = d3.max(variances)
+
+			  			var vectors = model.selectAll("eigenvector")[0].map(function(node){
+			  				return d3.select(node)
+			  					.selectAll("double")
+			  					.eachText(parseFloat)
+			  			})
+
+			  			var pcaFlipList = []
+			  			var pcaFlipListString = localStorage.pcaFlipList
+			  			if(pcaFlipListString) {
+			  				pcaFlipList = pcaFlipListString.split(",").map(function(d){
+				  				return d === "true"
+				  			})
+			  			}
+
+			  			pca.components = vectors.map(function(vector, i){
+			  				return {
+			  					number: i + 1,
+			  					flip: pcaFlipList[i] === true,
+			  					variance: variances[i],
+			  					normalizedVariance: variances[i] / maxVariance,
+			  					vector: vector.map(function(d, i){ 
+					  					return {relevance: d, attribute: attributes[i]}
+					  				})
+					  				.sort(function(l, r){ 
+					  					return l.relevance - r.relevance 
+					  				})
+			  				}
+			  			})
+
+						d3.json("bulk.json", function(error, json) {
+							if (error) console.warn(error)
+							setBulk(json)
+
+							pca.examples.forEach(function(example){
+								var instance = bulk.instances.firstWhose("id", example.id)
+								if(instance){
+									example.name = instance.name
+								}
+							})
+
+							// visualizeGraph2D(d3.select("body"))
+
+							for(var i = 1; i <= 5; ++i) {
+								visualizeComponent(d3.select("body"), i)
+							}
+						})
+	 		 		})
+	   		});
+		}
+
+	</script>
+</body>
+</html>

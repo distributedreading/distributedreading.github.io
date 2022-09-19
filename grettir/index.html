@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kiri</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="d3.min.js"></script>
+	<script src="d3.tja.js"></script>
+	<script src="bulk.js"></script>
+	<script src="debug.js"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+	<script>
+
+		d3.json("bulk.json", function(error, json) {
+			if (error) console.warn(error)
+			setBulk(json)
+			visualize()
+		})
+
+	</script>
+</body>
+</html>
