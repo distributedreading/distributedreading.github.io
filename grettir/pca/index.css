@@ -1,90 +1,92 @@
 * {
-	-webkit-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-html, body {
-	margin: 0px;
-	width: 100%;
-	height: 100%;
-	font-family: sans-serif;
-	font-weight: lighter;
-	font-size: 14px;
-	color: gray;
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  color: gray;
 }
 
 h1 {
-	width: 66.6vw;
-	font-weight: 100;
-	text-align: center;
+  width: 66.6vw;
+  font-weight: 100;
+  text-align: center;
 }
 
 .visualization {
-	display: flex;
-	justify-content: center;
-	border-bottom: thin dashed #ddd;
+  display: flex;
+  justify-content: center;
+  border-bottom: thin dashed #ddd;
 }
 
 /* svg */
 
 svg {
-	max-width: 67vw;
-	max-height: 100vh;
-	cursor: crosshair;
+  min-width: 50vw;
+  max-width: 67vw;
+  max-height: 100vh;
+  cursor: crosshair;
 }
 
 path.selection {
-	fill: rgba(0, 0, 0, 0.025);
-	stroke: red;
-	stroke-dasharray: 5, 5;
+  fill: rgba(0, 0, 0, 0.025);
+  stroke: red;
+  stroke-dasharray: 5, 5;
 }
 
 path.selection.highlight {
-	stroke: green;
+  stroke: green;
 }
 
 .instance circle {
-	stroke: rgba(0, 0, 0, 0.033);
-	stroke-width: 20px;
-	r: 12px;
+  stroke: rgba(0, 0, 0, 0.033);
+  stroke-width: 20px;
+  r: 12px;
 }
 
 .instance text {
-	cursor: inherit;
-	fill: white;
+  cursor: inherit;
+  fill: white;
 }
 
 .instance:hover circle {
-	r: 25px;
+  r: 25px;
 }
 
 /* detail */
 
 .detail {
-	padding-top: 1em;
-	width: 33vw;
-	overflow: auto;
-	/*-webkit-user-select: text;
+  padding-top: 1em;
+  width: 33vw;
+  overflow: auto;
+  /*-webkit-user-select: text;
 	user-select: text;*/
 }
 
 .detail div {
-	padding-top: 0.5em;
+  padding-top: 0.5em;
 }
 
 /* axes */
 
 .axis {
-	visibility: hidden;
-	fill: none;
-	stroke: gray;
-	stroke-width: 1;
+  visibility: hidden;
+  fill: none;
+  stroke: gray;
+  stroke-width: 1;
 }
 
 .tick text {
-	font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 .tick line {
-	stroke: lightgray;
+  stroke: lightgray;
 }
