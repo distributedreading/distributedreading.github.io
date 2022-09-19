@@ -1,105 +1,110 @@
-html, body {
-	margin: 0px;
-	width: 100%;
-	height: 100%;
-	font-family: sans-serif;
-	font-weight: lighter;
-	font-size: 14px;
-	color: gray;
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+  color: gray;
 }
 
 #details {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #errors {
-	max-width: 700px;
-	margin-top: 1em;
+  max-width: 700px;
+  margin-top: 1em;
 }
 
-h1, h2 {
-	font-weight: 100;
+h1,
+h2 {
+  font-weight: 100;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-	color: salmon;
+  color: salmon;
 }
 
 #visualization {
-	display: flex;
-	justify-content: center;
-	border-bottom: thin dashed #ddd;
+  display: flex;
+  justify-content: center;
+  border-bottom: thin dashed #ddd;
 }
 
 svg {
-	max-width: 66.66vh;
-	max-height: 66.66vh;
+  min-width: 500px;
+  min-height: 500px;
+  max-width: 66.66vh;
+  max-height: 66.66vh;
 }
 
 #menu {
-	min-width: 20em;
-	max-width: 20em;
-	max-height: 66.66vh;
+  min-width: 20em;
+  max-width: 20em;
+  max-height: 66.66vh;
 }
 
 #legend {
-	min-width: 20em;
-	max-width: 20em;
+  min-width: 20em;
+  max-width: 20em;
 }
 
-#menu, #legend {
-	margin-top: 1em;
-	overflow: scroll;
+#menu,
+#legend {
+  margin-top: 1em;
+  overflow: scroll;
 }
 
 #selection {
-	margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 #selection > * {
-	margin-top: 0.33em;
+  margin-top: 0.33em;
 }
 
 .dimension.menu.item {
-	display: flex;
-	justify-content: row nowrap;
+  display: flex;
+  justify-content: row nowrap;
 }
 
 .dimension.menu.item div:first-child {
-	padding-top: 0.2em;
-	padding-right: 0.33em;
+  padding-top: 0.2em;
+  padding-right: 0.33em;
 }
 
 .axis {
-	fill: none;
-	stroke: gray;
-	stroke-width: 1;
+  fill: none;
+  stroke: gray;
+  stroke-width: 1;
 }
 
 .tick text {
-	font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 .tick line {
-	stroke: lightgray;
+  stroke: lightgray;
 }
 
 circle.instance {
-	fill-opacity: 0.5;
-	stroke-opacity: 0.025;
-	stroke-width: 2em; 
-	r: 1em;
+  fill-opacity: 0.5;
+  stroke-opacity: 0.025;
+  stroke-width: 2em;
+  r: 1em;
 }
 
 circle.instance.emphasis {
-	fill-opacity: 1;
-	stroke-width: 0;
-	r: 2em;
+  fill-opacity: 1;
+  stroke-width: 0;
+  r: 2em;
 }
