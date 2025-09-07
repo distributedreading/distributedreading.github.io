@@ -13,11 +13,22 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 #errors {
-  max-width: 700px;
-  margin-top: 1em;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#errors header:hover {
+  color: #555;
+}
+
+#errors .arrow {
+  display: inline-block;
+  transition: transform 0.2s;
 }
 
 h1,
@@ -47,7 +58,6 @@ a:hover {
 #visualization {
   display: flex;
   justify-content: center;
-  border-bottom: thin dashed #ddd;
 }
 
 svg {
@@ -58,8 +68,8 @@ svg {
 
 #menu {
   min-width: 20em;
-  max-width: 20em;
   max-height: 66.66vh;
+  flex-shrink: 0;
 }
 
 #legend {
@@ -70,7 +80,12 @@ svg {
 #menu,
 #legend {
   margin-top: 1em;
-  overflow: scroll;
+  overflow: visible;
+}
+
+#menu {
+  overflow-x: visible;
+  overflow-y: auto;
 }
 
 #selection {
@@ -83,12 +98,20 @@ svg {
 
 .dimension.menu.item {
   display: flex;
-  justify-content: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.5em;
 }
 
 .dimension.menu.item div:first-child {
-  padding-top: 0.2em;
-  padding-right: 0.33em;
+  min-width: 80px;
+  padding-right: 0.5em;
+  text-align: right;
+}
+
+.dimension.menu.item select {
+  flex: 1;
+  min-width: 200px;
 }
 
 .axis {

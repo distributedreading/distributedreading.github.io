@@ -41,13 +41,6 @@ function visualize() {
 
 	buildMenu(div_menu)
 
-	body.append("div")
-		.style({
-			"text-align": "right",
-			"padding-right": "1em"
-		})
-		.text("Kiri 1.0.1")
-
 	var div_errors = body.append("div")
 		.attr("id", "details")
 			.append("div")
@@ -260,10 +253,10 @@ function buildMenu(selection) {
 		.attr("class", "dimension menu")
 		.on("change", update)
 		.selectAll("option")
-		.data([{name:"--"}].concat(bulk.dimensions.sort(function(l, r){
+		.data(bulk.dimensions.sort(function(l, r){
 			if(l.name < r.name) return -1
 			else return 1
-		})))
+		}))
 		.enter()
 			.append("option")
 			.text(text)
@@ -386,11 +379,44 @@ function updateFormulaLegend() {
 
 function buildErrors(selection) {
 
-	selection.append("header")
-		.append("h1")
-		.text("Errors")
+	var header = selection.append("header")
+		.style("cursor", "pointer")
+		.style("user-select", "none")
+		.style("padding", "10px 0")
+		.style("width", "100%")
+		.style("box-sizing", "border-box")
+		.style("border-top", "1px solid #e0e0e0")
+		.on("click", function() {
+			var article = d3.select("#errors article");
+			var arrow = d3.select("#errors .arrow");
+			var hint = d3.select("#errors .hint");
+			var isHidden = article.style("display") === "none";
+			article.style("display", isHidden ? "block" : "none");
+			arrow.text(isHidden ? "▼" : "▶");
+			hint.style("display", isHidden ? "none" : "inline");
+		})
+
+	header.append("span")
+		.attr("class", "arrow")
+		.style("margin-right", "0.5em")
+		.text("▶")
+
+	header.append("span")
+		.text("Data Completeness Report")
+		.style("font-size", "1.2em")
+		.style("font-weight", "300")
+		
+	header.append("span")
+		.attr("class", "hint")
+		.text(" (click to expand)")
+		.style("font-size", "0.8em")
+		.style("color", "#999")
+		.style("margin-left", "0.5em")
 
 	var article = selection.append("article")
+		.style("display", "none")  // Hidden by default
+		.style("margin-top", "10px")
+		.style("padding", "10px 0")
 
 	appendErrors(bulk.dimensions, article)
 	appendErrors(bulk.formulas, article)
