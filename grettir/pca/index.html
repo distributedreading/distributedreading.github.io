@@ -118,6 +118,25 @@
 							})
 
 							visualizeGraph2D(d3.select("body"))
+							
+							// Add 3D link after the main 2D visualization
+							var visualizations = d3.selectAll(".visualization")[0];
+							if (visualizations.length > 0) {
+								d3.select(visualizations[0].parentNode)
+									.insert("div", function() { 
+										return visualizations[0].nextSibling;
+									})
+									.style("text-align", "right")
+									.style("max-width", "1400px")
+									.style("margin", "0 auto 2em")
+									.style("width", "100%")
+									.append("a")
+									.attr("href", "3d/")
+									.style("color", "#4169E1")
+									.style("text-decoration", "none")
+									.style("font-size", "1.1em")
+									.text("✨ Explore in 3D")
+							}
 
 							for(var i = 1; i <= 5; ++i) {
 								visualizeComponent(d3.select("body"), i)

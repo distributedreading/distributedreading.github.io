@@ -55,6 +55,11 @@ a:hover {
   color: salmon;
 }
 
+#menu a[href="3d/"]:hover {
+  color: #1e3a8a !important;
+  text-decoration: underline !important;
+}
+
 #visualization {
   display: flex;
   justify-content: center;

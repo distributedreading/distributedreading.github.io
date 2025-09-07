@@ -263,6 +263,14 @@ function buildMenu(selection) {
 
 	selection.append("div")
 		.attr("id", "selection")
+	
+	// Add link to 3D visualization
+	selection.append("div")
+		.style("margin-top", "2em")
+		.style("text-align", "right")
+		.html('<a href="3d/" style="color: #4169E1; text-decoration: none; font-size: 1.1em;">' +
+			'✨ Explore in 3D' +
+			'</a>')
 }
 
 function updateFormulaLegend() {

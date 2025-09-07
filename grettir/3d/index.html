@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grettir's Temper Management - 3D Dimension Browser</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(to bottom, #f0f0f0, #fff);
+            overflow: hidden;
+        }
+        
+        #container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #header {
+            padding: 20px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+            font-weight: 300;
+            color: #333;
+        }
+        
+        #description {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        
+        #controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .control-group label {
+            font-size: 0.9em;
+            color: #444;
+            font-weight: 500;
+        }
+        
+        .control-group select {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+            font-size: 0.9em;
+            cursor: pointer;
+            min-width: 150px;
+        }
+        
+        #canvas-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #tooltip {
+            position: absolute;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9em;
+            pointer-events: none;
+            display: none;
+            z-index: 100;
+            max-width: 300px;
+        }
+        
+        #legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        #legend h3 {
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .legend-item {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            border: 1px solid rgba(0,0,0,0.2);
+        }
+        
+        #instructions {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 200px;
+        }
+        
+        #instructions h3 {
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        #instructions ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        #instructions li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Grettir's Temper Management - 3D Dimension Browser</h1>
+            <div id="description">
+                Explore three dimensions simultaneously from 41 instances of temper management in <em>Grettis saga</em>
+            </div>
+            <div id="controls">
+                <div class="control-group">
+                    <label>X Axis:</label>
+                    <select id="x-dimension"></select>
+                </div>
+                <div class="control-group">
+                    <label>Y Axis:</label>
+                    <select id="y-dimension"></select>
+                </div>
+                <div class="control-group">
+                    <label>Z Axis:</label>
+                    <select id="z-dimension"></select>
+                </div>
+                <div class="control-group">
+                    <label>Color by:</label>
+                    <select id="color-dimension"></select>
+                </div>
+            </div>
+        </div>
+        
+        <div id="canvas-container">
+            <canvas id="3d-canvas"></canvas>
+            <div id="tooltip"></div>
+            
+            <div id="legend">
+                <h3>Formulas</h3>
+                <div id="legend-content"></div>
+            </div>
+            
+            <div id="instructions">
+                <h3>Controls</h3>
+                <ul>
+                    <li>Left click + drag to rotate</li>
+                    <li>Right click + drag to pan</li>
+                    <li>Scroll to zoom</li>
+                    <li>Hover for details</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../d3.min.js"></script>
+    <script src="../d3.tja.js"></script>
+    <script src="../bulk.js"></script>
+    <script src="visualization3d.js"></script>
+</body>
+</html>
