@@ -57,11 +57,16 @@ function initialize() {
 	if (!localStorage.vertical || !localStorage.horizontal) {
 		// Get dimension IDs for defaults
 		var dimensions = d3.select("select.dimension.menu").selectAll("option").data();
-		// Set defaults: offence weight (index 3) for horizontal, offence impact (index 12) for vertical
+		// Set defaults: offence weight for vertical, offence impact for horizontal
 		// These were prominently featured in the paper's Figure 11.8
-		if (dimensions.length > 12) {
-			localStorage.horizontal = dimensions[3].id;  // offence weight
-			localStorage.vertical = dimensions[12].id;   // offence impact
+		
+		// Find dimensions by name instead of using fixed indices
+		var offenceWeight = dimensions.find(function(d) { return d.name === "offence weight"; });
+		var offenceImpact = dimensions.find(function(d) { return d.name === "offence impact"; });
+		
+		if (offenceWeight && offenceImpact) {
+			localStorage.vertical = offenceWeight.id;    // offence weight
+			localStorage.horizontal = offenceImpact.id;  // offence impact
 		}
 	}
 
@@ -267,9 +272,9 @@ function buildMenu(selection) {
 	// Add link to 3D visualization
 	selection.append("div")
 		.style("margin-top", "2em")
-		.style("text-align", "right")
+		.style("text-align", "left")
 		.html('<a href="3d/" style="color: #4169E1; text-decoration: none; font-size: 1.1em;">' +
-			'✨ Explore in 3D' +
+			'Explore in 3D' +
 			'</a>')
 }
 

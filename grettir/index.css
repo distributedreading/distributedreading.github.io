@@ -63,42 +63,57 @@ a:hover {
 #visualization {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
 }
 
 svg {
+  width: 66.66vh;
+  height: 66.66vh;
   min-width: 500px;
   max-width: 66.66vh;
-  max-height: 66.66vh;
-}
-
-#menu {
-  min-width: 20em;
   max-height: 66.66vh;
   flex-shrink: 0;
 }
 
+#menu {
+  width: 20em;
+  height: 66.66vh;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 #legend {
-  min-width: 20em;
-  max-width: 20em;
+  width: 20em;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
 #menu,
 #legend {
   margin-top: 1em;
-  overflow: visible;
 }
 
-#menu {
-  overflow-x: visible;
-  overflow-y: auto;
+#legend {
+  overflow: visible;
 }
 
 #selection {
   margin-top: 1.5em;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 #selection > * {
   margin-top: 0.33em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .dimension.menu.item {
@@ -109,9 +124,10 @@ svg {
 }
 
 .dimension.menu.item div:first-child {
-  min-width: 80px;
+  width: 80px;
   padding-right: 0.5em;
-  text-align: right;
+  text-align: left;
+  flex-shrink: 0;
 }
 
 .dimension.menu.item select {
