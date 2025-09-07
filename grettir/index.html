@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kiri</title>
+	<title>Grettir's Temper Management - Dimension Browser</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script src="d3.min.js"></script>
@@ -11,6 +11,12 @@
 	<script src="index.js"></script>
 </head>
 <body>
+	<h1>Grettir's Temper Management - Dimension Browser</h1>
+	<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2em; font-size: 0.95em; line-height: 1.5;">
+		Explore relationships between any two of 21 dimensions characterizing 41 instances of temper management in <em>Grettis saga</em>. 
+		Select dimensions from the dropdown menus below to visualize their interactions. 
+		Hover over points to see instance details in the right panel.
+	</p>
 	<script>
 
 		d3.json("bulk.json", function(error, json) {

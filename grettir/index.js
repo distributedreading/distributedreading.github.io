@@ -60,6 +60,18 @@ function visualize() {
 
 function initialize() {
 
+	// Set default dimensions if none are stored
+	if (!localStorage.vertical || !localStorage.horizontal) {
+		// Get dimension IDs for defaults
+		var dimensions = d3.select("select.dimension.menu").selectAll("option").data();
+		// Set defaults: offence weight (index 3) for horizontal, offence impact (index 12) for vertical
+		// These were prominently featured in the paper's Figure 11.8
+		if (dimensions.length > 12) {
+			localStorage.horizontal = dimensions[3].id;  // offence weight
+			localStorage.vertical = dimensions[12].id;   // offence impact
+		}
+	}
+
 	var selectedIndices = [localStorage.vertical, localStorage.horizontal]
 		.map(function(id, i){
 			var index = i

@@ -1,9 +1,21 @@
 body {
-  overflow: hidden;
+  overflow: auto;
   margin: 0;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica;
-  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+#body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
 }
 
 #chart, #header, #footer {
@@ -25,15 +37,14 @@ body {
 }
 
 #header {
-  top: 80px;
-  left: 140px;
-  width: 1000px;
+  display: none;
 }
 
 #footer {
-  top: 500px;
-  left: 500px;
-  text-align: right;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
 }
 
 rect {
@@ -81,9 +92,9 @@ a:hover {
 }
 
 .hint {
-  position: absolute;
-  right: 0;
-  width: 1280px;
+  position: relative;
+  margin-top: 10px;
   font-size: 12px;
   color: #999;
+  text-align: center;
 }

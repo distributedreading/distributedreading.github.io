@@ -11,7 +11,12 @@
 	<script src="index.js"></script>
 </head>
 <body>
-	<!-- <h1>Grettir's Temper Management</h1> -->
+	<h1>Grettir's Temper Management</h1>
+	<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2em; font-size: 0.95em; line-height: 1.5;">
+		An interactive visualization of 41 instances of temper management in <em>Grettis saga</em>, 
+		reduced from 21 dimensions to principal components. Hover over numbered points to see instance details. 
+		Click and drag to draw a selection boundary around multiple instances for group analysis.
+	</p>
 
 <!-- 	&nbsp; Wed 15 Jun 11:30 &nbsp;
 
@@ -101,7 +106,7 @@
 			  				}
 			  			})
 
-						d3.json("bulk.json", function(error, json) {
+						d3.json("../bulk.json", function(error, json) {
 							if (error) console.warn(error)
 							setBulk(json)
 
@@ -112,7 +117,7 @@
 								}
 							})
 
-							// visualizeGraph2D(d3.select("body"))
+							visualizeGraph2D(d3.select("body"))
 
 							for(var i = 1; i <= 5; ++i) {
 								visualizeComponent(d3.select("body"), i)
